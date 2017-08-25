@@ -1,0 +1,20 @@
+{
+  "name": "test-server",
+  "version": "1.0.0",
+  "description": "test for IOS",
+  "main": "testExample.js",
+  "dependencies": {
+    "appium-ios-driver": "^1.26.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "ios",
+    "swift",
+    "test"
+  ],
+  "author": "juan camilo",
+  "license": "ISC"
+}
