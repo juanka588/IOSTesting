@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cXc-7A-Xt7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -20,59 +20,12 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ogf-CA-gxm">
-                                <rect key="frame" x="143" y="319" width="90" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="R8E-Dk-6CZ"/>
-                                    <constraint firstAttribute="width" constant="90" id="hFs-yt-gCi"/>
-                                </constraints>
-                                <state key="normal" title="Record"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CWx-AR-Z9Q">
-                                <rect key="frame" x="163" y="379" width="50" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k9i-54-x1L">
-                                <rect key="frame" x="171" y="420" width="32" height="30"/>
-                                <state key="normal" title="Stop"/>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="CWx-AR-Z9Q" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="6gt-cu-p6w"/>
-                            <constraint firstItem="CWx-AR-Z9Q" firstAttribute="top" secondItem="ogf-CA-gxm" secondAttribute="bottom" constant="30" id="Vtk-xv-B9Q"/>
-                            <constraint firstItem="k9i-54-x1L" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Y5I-Tt-JCW"/>
-                            <constraint firstItem="ogf-CA-gxm" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="ehU-bn-Zu0"/>
-                            <constraint firstItem="ogf-CA-gxm" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="f8d-2h-s61"/>
-                            <constraint firstItem="k9i-54-x1L" firstAttribute="top" secondItem="CWx-AR-Z9Q" secondAttribute="bottom" constant="20" id="n6e-ga-wfH"/>
-                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Bde-Xz-jzp"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="991.20000000000005" y="374.66266866566718"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Y4l-Po-7W2">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cXc-7A-Xt7" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UvW-qL-tTe">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="01J-lp-oVM" kind="relationship" relationship="rootViewController" id="4ZA-fL-5I0"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="THD-T6-tsq" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
 </document>
