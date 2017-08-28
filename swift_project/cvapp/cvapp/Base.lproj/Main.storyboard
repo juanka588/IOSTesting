@@ -23,22 +23,29 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ii-tm-RHI">
                                 <rect key="frame" x="143" y="319" width="90" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="recordBtn"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="90" id="JZd-Zg-yOM"/>
                                     <constraint firstAttribute="height" constant="30" id="xTn-eA-VKK"/>
                                 </constraints>
                                 <state key="normal" title="Record"/>
+                                <connections>
+                                    <action selector="startRecord:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t3L-OM-DfH"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dIM-gJ-FvR">
-                                <rect key="frame" x="163" y="379" width="50" height="21"/>
+                                <rect key="frame" x="163" y="369" width="50" height="21"/>
+                                <accessibility key="accessibilityConfiguration" identifier="messageLabel"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H3r-if-0zw">
                                 <rect key="frame" x="171" y="412" width="32" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="stopBtn"/>
                                 <state key="normal" title="Stop"/>
                                 <connections>
+                                    <action selector="stopRecord:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bIc-hP-Agi"/>
                                     <segue destination="taD-U1-yky" kind="show" id="a8R-k2-kLI"/>
                                 </connections>
                             </button>
@@ -46,14 +53,17 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="H3r-if-0zw" secondAttribute="bottom" constant="225" id="1IK-dQ-Ix6"/>
-                            <constraint firstItem="H3r-if-0zw" firstAttribute="top" secondItem="dIM-gJ-FvR" secondAttribute="bottom" constant="12" id="GhN-SO-9qp"/>
                             <constraint firstItem="8ii-tm-RHI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KEQ-Jc-keI"/>
                             <constraint firstItem="H3r-if-0zw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YWE-yM-YEH"/>
+                            <constraint firstItem="dIM-gJ-FvR" firstAttribute="top" secondItem="8ii-tm-RHI" secondAttribute="bottom" constant="20" id="sto-rh-5cG"/>
                             <constraint firstItem="8ii-tm-RHI" firstAttribute="centerX" secondItem="dIM-gJ-FvR" secondAttribute="centerX" id="v9R-uf-ZLn"/>
                             <constraint firstItem="8ii-tm-RHI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="wNb-76-HLB"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ufh-dQ-0Uz"/>
+                    <connections>
+                        <outlet property="messageLabel" destination="dIM-gJ-FvR" id="CpF-JP-muL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -70,7 +80,23 @@
                     <view key="view" contentMode="scaleToFill" id="z2x-bS-sqp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FzV-6V-X5O">
+                                <rect key="frame" x="38" y="83" width="300" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="nameInput"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="wzR-qD-G2k"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FzV-6V-X5O" firstAttribute="top" secondItem="MSp-dn-bJa" secondAttribute="bottom" constant="19" id="OOB-TT-3mU"/>
+                            <constraint firstItem="FzV-6V-X5O" firstAttribute="centerX" secondItem="z2x-bS-sqp" secondAttribute="centerX" id="Z4r-sY-KdH"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q7w-uy-yxE" userLabel="First Responder" sceneMemberID="firstResponder"/>

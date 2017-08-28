@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var messageLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -21,5 +24,12 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func stopRecord(_ sender: Any) {
+        messageLabel.text="Tap to record"
+    }
+    
+    @IBAction func startRecord(_ sender: Any) {
+        messageLabel.text="recording..."
+    }
 }
 
