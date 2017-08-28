@@ -46,7 +46,7 @@ describe("ios simple", function () {
     return 100;
   }
 
-  it("should click the record button, change the label value, and change screen clicking over stop button", function () {
+  it("should click the record button, change the label value", function () {
     return driver
       .resolve(populate()).then(function (sum) {
         console.log("variable sent");
@@ -56,22 +56,28 @@ describe("ios simple", function () {
           el.click();
         });
 
-        var cond = driver
+        return driver
             .elementByAccessibilityId('messageLabel')
             .text().should.become("recording...");
+      });
+  });
 
-        id ='stopBtn';
+it("should change screen clicking over stop buttonand type some text", function () {
+    return driver
+      .resolve().then(function () {
+        var id ='stopBtn';
         driver.waitForElementById(id, 3000).then(function (el) {
           el.click();
         });
-        id ='nameInput';
-        driver.waitForElementById(id, 3000).then(function (el) {
-          el.sendKeys("juan es genial");
-        });
 
-        return cond;
+        return driver.waitForElementById('nameInput',3000).then(function (el) {
+            return el.sendKeys("juan es genial").getValue().should.become("juan no es genial")
+            .elementByName('Done').click().sleep(1000); // dismissing keyboard
+            console.log("function type called");
+        });;
 
       });
   });
+
 
 });
