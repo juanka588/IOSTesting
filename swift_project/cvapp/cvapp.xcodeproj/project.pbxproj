@@ -196,6 +196,7 @@
 				TargetAttributes = {
 					0DC35A561F50CF7A0074CF15 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = TP6QSMH982;
 						ProvisioningStyle = Automatic;
 					};
 					0DC35A6D1F50CF7A0074CF15 = {
@@ -418,6 +419,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = TP6QSMH982;
 				INFOPLIST_FILE = cvapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.unal.cvapp;
@@ -430,6 +432,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = TP6QSMH982;
 				INFOPLIST_FILE = cvapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.unal.cvapp;
@@ -511,6 +514,7 @@
 				0DC35A841F50CF7A0074CF15 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0DC35A851F50CF7A0074CF15 /* Build configuration list for PBXNativeTarget "cvappTests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +523,7 @@
 				0DC35A871F50CF7A0074CF15 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0DC35A881F50CF7A0074CF15 /* Build configuration list for PBXNativeTarget "cvappUITests" */ = {
 			isa = XCConfigurationList;
@@ -527,6 +532,7 @@
 				0DC35A8A1F50CF7A0074CF15 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
